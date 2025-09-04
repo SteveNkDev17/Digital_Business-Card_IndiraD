@@ -58,6 +58,7 @@ body {
   letter-spacing: 1px;
   text-transform: uppercase;
 }
+/* Dynamische Unterstreichung beim drübergehen mit der Maus*/
 .menu a:hover { text-decoration: underline; }
 
 /* Bild im Kopfbereich*/
