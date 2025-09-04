@@ -1,0 +1,20 @@
+/* Minimal start, leicht erweiterbar */
+:root { --max: 62rem; }
+* { box-sizing: border-box; }
+body {
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, 'Noto Sans', Arial, sans-serif;
+  line-height: 1.5;
+  margin: 0;
+}
+.container { max-width: var(--max); margin: 0 auto; padding: 1rem; }
+header { border-bottom: 1px solid #e5e7eb; }
+header h1 { margin: .5rem 0 0 0; }
+.subtitle { margin: 0 0 .5rem 0; color: #6b7280; }
+nav { display: flex; gap: 1rem; margin: .5rem 0 0 0; }
+nav a { text-decoration: none; }
+main { padding-block: 1rem; }
+h2 { margin-top: 1.5rem; }
+footer { border-top: 1px solid #e5e7eb; text-align: center; padding: 1rem; color: #6b7280; }
+@media (min-width: 700px) {
+  header, main, footer { padding-inline: 2rem; }
+}
