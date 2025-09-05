@@ -8,7 +8,7 @@ html, body {
 /* Logo-Leiste ganz oben */
 #topbar {
   background: #fff;          /* z. B. weiß */
-  padding: 60px 20px;
+  padding: 40px 20px;
   display: flex;             /* Flex einschalten */
   justify-content: center; /* horizontal mittig */
   align-items: center;
