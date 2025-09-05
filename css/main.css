@@ -7,7 +7,7 @@ html, body {
 
 /* Logo-Leiste ganz oben */
 #topbar {
-  background: #fff;          /* z. B. weiß */
+  background: #F8F7F5;
   padding: 40px 20px;
   display: flex;             /* Flex einschalten */
   justify-content: center; /* horizontal mittig */
@@ -15,7 +15,11 @@ html, body {
 }
 
 #logotext {
-  font-size: 28px;
+  font-size: 40px;
+  font-weight: 600;                /* halb-fett */
+  font-family: "Georgia", serif;   /* elegante Serifenschrift */
+  letter-spacing: 4px;             /* mehr Abstand zwischen den Buchstaben */
+  color: #111;  
   text-transform: uppercase; /* alles in Großbuchstaben */
   margin: 0;
 }
