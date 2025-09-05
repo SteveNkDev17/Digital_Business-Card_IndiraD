@@ -1,152 +1,75 @@
-/* Basis */
-* { box-sizing: border-box; }
-body {
-  margin: 0;
-  font-family: "Times New Roman", Georgia, serif; /* wirkt magazinartig */
-  color: #222;
+
+html, body {
+  margin: 0;/* äußerer Abstand, entfernt weißen Rand */
+  padding: 0;/* innerer Abstand,*/
+  overflow-x: hidden;/* verhindert horizontales Scrollen */
 }
 
-/* Top-Brand mit zentriertem Logo/Text */
-.top-logo {
-  display: grid;
-  place-items: center;           /* zentrieren */
-  padding: 24px 16px;
-  border-bottom: 1px solid #eee; /* feine Linie darunter */
-}
-.top-logotext {
-  text-decoration: none;
-  color: #111;
-  text-align: center;
-  letter-spacing: 2px;
-  font-size: clamp(28px, 4vw, 48px);
-  line-height: 0.95;
-  font-weight: 600;
-}
-
-/* Navigation */
-.main-navigation {
-  display: grid;
-  grid-template-columns: 40px 1fr 40px; /* Icon | Menü | Icon */
+/* Logo-Leiste ganz oben */
+#topbar {
+  background: #fff;          /* z. B. weiß */
+  padding: 60px 20px;
+  display: flex;             /* Flex einschalten */
+  justify-content: center; /* horizontal mittig */
   align-items: center;
-  gap: 8px;
-  padding: 12px 16px;
-  border-bottom: 1px solid #eee;
 }
 
-/* Icon-Buttons links/rechts */
-.icon-btn {
-  display: grid;
-  place-items: center;
-  width: 40px; height: 40px;
-  border: 0; background: transparent;
-  color: #333; cursor: pointer;
+#logotext {
+  font-size: 28px;
+  text-transform: uppercase; /* alles in Großbuchstaben */
+  margin: 0;
 }
 
-/* Menü mittig */
-.menu {
-  list-style: none;
+#top-picture {
+  position: relative;   /* damit die Leiste sich im Hero-Bereich positionieren kann */
+  height: 600px;
+
   display: flex;
-  justify-content: center;       /* zentriert die Links */
-  align-items: center;
-  gap: clamp(12px, 3vw, 40px);   /* dynamische Abstände */
-  margin: 0; padding: 0;
-}
-.menu a {
-  text-decoration: none;
-  color: #2b2b2b;
-  font-size: 14px;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-}
-/* Dynamische Unterstreichung beim drübergehen mit der Maus*/
-.menu a:hover { text-decoration: underline; }
-
-/* Bild im Kopfbereich*/
-.hero {
-  height: 60vh;              /* Höhe: 60% der Fensterhöhe */
-  overflow: hidden;          /* falls Bild größer ist */
+  align-items: center;   /* Logo + Text schön ausrichten */
+  gap: 20px; 
 }
 
-.hero img {
-  width: 100%;               /* immer so breit wie der Bildschirm */
-  height: 100%;              /* füllt die Section-Höhe */
-  object-fit: cover;         /* Bild wird beschnitten, bleibt proportional */
-  display: block;            /* kein extra Rand */
-}
-
-
-
-/* Responsive: auf kleinen Screens Menü scroll-/wrap-fähig */
-@media (max-width: 860px) {
-  .menu {
-    overflow-x: auto;            /* horizontal scrollen falls zu lang */
-    scrollbar-width: thin;
-  }
-  .menu { gap: 20px; }
-  .menu a { white-space: nowrap; }
-}
-
-/* Sehr schmal: Links auf zwei Zeilen umbrechen */
-@media (max-width: 560px) {
-  .mainnav {
-    grid-template-columns: 40px 1fr 40px;
-    row-gap: 8px;
-  }
-  .menu {
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 12px 18px;
-  }
-}
-
-
-
-/* Galerie-Bereich */
-.galerie {
-  background: #fcf7ee;              /* sehr helles Beige wie im Beispiel */
-  padding: 32px 16px 16px;
-}
-
-.galerie-title {
-  margin: 0 0 16px;
-  text-align: center;
-  letter-spacing: 2px;
-  font-weight: 600;
-  text-transform: uppercase;
-}
-
-/* Grid mit Spalten + Abständen */
-.galerie-grid {
-  max-width: 1400px;
-  margin: 0 auto;
-  display: grid;
-  gap: 12px;
-  grid-template-columns: 1fr;       /* mobil: 1 Spalte */
-}
-
-/* Bildkacheln */
-.galerie-item {
-  margin: 0;
-  background: #eaeaea;
-  overflow: hidden;
-  border-radius: 4px;
-}
-
-.galerie-item img {
+#top-picture img {
+  display: block;
   width: 100%;
   height: 100%;
-  aspect-ratio: 16 / 9;
-  object-fit: cover;
+  object-fit: cover;   /* füllt aus, ohne zu verzerren */
   display: block;
 }
 
-/* Tablet: 2 Spalten */
-@media (min-width: 768px) {
-  .galerie-grid { grid-template-columns: repeat(2, 1fr); }
+#navigationsleiste {
+  position: absolute;   /* legt die Leiste über das Bild */
+  top: 0;
+  left: 0;
+  background-color: rgba(51, 51, 51, 0.7);
+  width: 100%; /* volle Breite */
+  padding: 20px;
 }
 
-/* Desktop: 3 Spalten */
-@media (min-width: 1100px) {
-  .galerie-grid { grid-template-columns: repeat(3, 1fr); }
+#navigationsleiste ul {
+  margin: 0;     /* äußerer Abstand, entfernt weißen Rand */
+  padding: 0;    /* innerer Abstand,*/
+  display: flex; /* Links nebeneinander */
+  justify-content: center; /* ganze Gruppe mittig */
+  gap: 40px; 
 }
+
+#navigationsleiste li {
+  list-style: none;
+}
+
+#navigationsleiste a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  padding: 10px 15px;
+}
+
+
+
+
+
+
+
+
 
