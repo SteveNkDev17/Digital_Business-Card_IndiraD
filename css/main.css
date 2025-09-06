@@ -12,28 +12,25 @@ body
 /*Header-Bereich*/
 .navbar{
   width: 100%;
-  background-color: white;
   padding: 20px 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  border-bottom: 2px solid gray; 
 }
 
 .logo{
-  background-color: blue;
   margin: 0;
   padding: 20px 20px;
   text-align: center;
   font-size: 28px;
   font-weight: bold;
-  color: white
+  color: beige;
 }
 
 .nav{
-  background-color: blue;
   margin: 0;
   padding: 20px 20px;
-    
 }
 
 .nav-list{
@@ -45,7 +42,6 @@ body
 }
 
 .list-item{
-  background-color: rgb(173, 173, 38);
   margin: 0;
   padding: 0;
 }
@@ -53,25 +49,24 @@ body
 .nav-link {
   text-decoration: none;
   font-size: 26px;
-  color: white;
+  color: beige;
   padding: 8px 16px;/*Klickbereich*/
   display: block;       /* Link füllt das ganze li */
   text-align: center;   /* Text mittig */
 }
 
 .nav-link:hover { 
-  background: black;
+  color: gold;
 }
 
 /*Motto-Bereich*/
 .motto{
   width: 100%;
-  background-color: gray;
   padding: 40px 40px;
+  border-bottom: 2px solid gray; 
 }
 
 .motto-container{
-  background-color: blue;
   padding: 40px 40px;
   text-align: left;
 }
@@ -80,7 +75,7 @@ body
   font-size: 46px;
   font-weight: 700;
   line-height: 1.1;
-  color: white;
+  color: beige;
   margin-bottom: 20px;
   
 }
@@ -95,15 +90,13 @@ body
 /*Hero-Image-Bereich*/
 .heroimage-section {
   width: 100%;
-  
   padding: 20px 20px; 
-  background-color: blue; 
+  border-bottom: 2px solid gray; 
 }
 
 .heroimage-container {
   width: 100%;
   padding: 20px 20px;
-  background-color: blueviolet;
 }
 
 .heroimage-container img {
