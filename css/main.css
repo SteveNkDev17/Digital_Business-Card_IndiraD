@@ -93,21 +93,23 @@ body
 }
 
 /*Hero-Image-Bereich*/
-.heroimage {
+.heroimage-section {
   width: 100%;
-  max-width: 1200px;   /* optional, um Gesamtbreite zu begrenzen */
-  margin: 0 auto;      /* zentriert, falls max-width kleiner als Bildschirm */
+  
+  padding: 20px 20px; 
+  background-color: blue; 
 }
 
 .heroimage-container {
   width: 100%;
-  overflow: hidden;    /* verhindert, dass Bild rausläuft */
+  padding: 20px 20px;
+  background-color: blueviolet;
 }
 
 .heroimage-container img {
-  width: 100%;         /* passt Bild an Containerbreite an */
-  height: auto;        /* Höhe automatisch, damit Bild nicht verzerrt */
-  display: block;      /* verhindert kleine Lücken unter dem Bild */
+  width: 100%;         
+  height: auto;        
+  display: block;      
 }
 
 
