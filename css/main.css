@@ -112,6 +112,45 @@ body
 
 
 
+/* Basis für alle Sections */
+.section {
+  width: 100%;               /* volle Breite */
+  padding: 40px 20px;         /* Luft nach innen */
+  border-bottom: 2px solid gray;
+}
+
+/* Container in jeder Section */
+.section-container {
+  height: 800px;              /* sichtbar als Quadrat */
+  background: black;          /* zum Testen */
+  margin: 0 auto;             /* zentrieren */
+  display: flex;              /* Inhalt zentrieren (falls Text kommt) */
+  align-items: center;
+  justify-content: center;
+  color: beige;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* Footer */
+.footer {
+  width: 100%;
+  padding: 40px 20px;
+  background: #111;           /* dunkler Balken */
+  color: beige;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+
+
+
+
+
 
 
 
