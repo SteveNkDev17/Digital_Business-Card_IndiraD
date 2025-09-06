@@ -54,11 +54,12 @@ body
   font-size: 26px;
   color: white;
   padding: 8px 16px;/*Klickbereich*/
+  display: block;       /* Link füllt das ganze li */
+  text-align: center;   /* Text mittig */
 }
 
 .nav-link:hover { 
   background: black;
-  
 }
 
 
