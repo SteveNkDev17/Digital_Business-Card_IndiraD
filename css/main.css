@@ -186,7 +186,6 @@ body
 
   .nav { 
     padding: 0;                   /* Innenabstand zurücknehmen */
-    background-color: blueviolet;     /* Farbe weg, Navbar dominiert */
   }
 
   .nav-list {
