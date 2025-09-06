@@ -15,9 +15,6 @@ body
   align-items: center;
 }
 
-
-
-
 .logo{
   background-color: blue;
   margin: 0;
@@ -39,18 +36,18 @@ body
   margin: 0;
   padding: 0;
   display: flex; /* li horizontal ausrichten*/   
-  gap: 20px; /* Abstand zwischen den li */
+  gap: 80px; /* Abstand zwischen den li */
 }
 
 .list-item{
   background-color: rgb(173, 173, 38);
   margin: 0;
-  padding: 5px 5px;
+  padding: 5px 20px;
 }
 
 .nav-link {
   text-decoration: none;
-  font-size: 18px;
+  font-size: 26px;
   color: white;
 }
 
