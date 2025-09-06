@@ -30,7 +30,7 @@ body
 }
 
 .nav{
-  background-color: blueviolet;
+  background-color: blue;
   margin: 0;
   padding: 20px 20px;
     
@@ -78,15 +78,38 @@ body
 
 .motto-title{
   font-size: 46px;
+  font-weight: 700;
+  line-height: 1.1;
   color: white;
+  margin-bottom: 20px;
   
 }
 
-
 .motto-subtitle{
   font-size: 22px;
+  font-weight: 400;
+  line-height: 1.4;
   color: white;
 }
+
+/*Hero-Image-Bereich*/
+.heroimage {
+  width: 100%;
+  max-width: 1200px;   /* optional, um Gesamtbreite zu begrenzen */
+  margin: 0 auto;      /* zentriert, falls max-width kleiner als Bildschirm */
+}
+
+.heroimage-container {
+  width: 100%;
+  overflow: hidden;    /* verhindert, dass Bild rausläuft */
+}
+
+.heroimage-container img {
+  width: 100%;         /* passt Bild an Containerbreite an */
+  height: auto;        /* Höhe automatisch, damit Bild nicht verzerrt */
+  display: block;      /* verhindert kleine Lücken unter dem Bild */
+}
+
 
 
 
