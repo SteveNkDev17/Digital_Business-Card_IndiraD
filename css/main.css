@@ -1,81 +1,105 @@
-body {
-  margin: 0;   /* weißen Rand weg */
-  padding: 0;  /* Sicherheitsmaßnahme */
-}
-
-.header{
-  background-color: #222;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 30px 86px;
-  border-bottom: 1px solid #555;
-}
-
-.logo{
-  display: flex;
-  align-items: center;
-  font-size: 38px;
-  font-weight: bold;
-  color: white;
-  line-height: 1;
+/* Basis */
+* { box-sizing: border-box; }
+body 
+{ 
+  margin: 0; 
+  font-family: system-ui, Arial, sans-serif; 
 }
 
 .navbar{
+  width: 100%;
+  background-color: #222;
+  padding: 20px 20px;
   display: flex;
-  flex: 1;                   
-  justify-content: center;   
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+
+
+.logo{
+  background-color: blue;
+  margin: 0;
+  padding: 20px 20px;
+  font-size: 28px;
+  font-weight: bold;
+  color: white
+}
+
+.nav{
+  background-color: blueviolet;
+  margin: 0;
+  padding: 20px 20px;
+    
 }
 
 .nav-list{
-  display: flex; 
-  list-style: none;
+  list-style: none; /* punkte entfernen*/  
   margin: 0;
   padding: 0;
-  gap: 20px;
+  display: flex; /* li horizontal ausrichten*/   
+  gap: 20px; /* Abstand zwischen den li */
 }
 
-.nav-link{
-  display: block; /*Klickfläche*/
-  padding: 10px 26px;/*Größe der Klickfläche*/
-  color: white;
+.list-item{
+  background-color: rgb(173, 173, 38);
+  margin: 0;
+  padding: 5px 5px;
+}
+
+.nav-link {
   text-decoration: none;
-  font-size: 22px;
-  line-height: 1;
-}
-
-.nav-link:hover{
-  background-color: #555;
-  border-radius: 4px;
+  font-size: 18px;
+  color: white;
 }
 
 
 
-/* Einheitlicher Container für alle Sektionen */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .container {
   max-width: 1320px;
   margin: 0 auto;
-  padding: 0 20px; /* links/rechts Abstand */
+  padding: 0 20px; 
 }
 
-/* Motto-Bereich */
+
 .motto {
   background: #222;   
   color: #fff;
-  padding: 80px 0 20px; /* oben/unten Luft, keine linke Verschiebung */
+  padding: 80px 0 20px; 
 }
+
 .motto-title {
   margin: 0;
   font-size: 56px;
   line-height: 1.2;
 }
+
 .motto-subtitle {
   margin: 0 0 20px 0;
   font-size: 18px;
   opacity: 0.9;
 }
 
-/* Author-Bereich */
+
 .author-project {
   background: #222;
   color: white;
@@ -90,7 +114,7 @@ body {
   height: 50px;
   border-radius: 50%;
   margin-right: 15px;
-  margin-bottom: 30px; /* Abstand nach unten */
+  margin-bottom: 30px; 
 }
 .author-info h3 {
   margin: 0;
@@ -103,11 +127,12 @@ body {
 }
 
 .author-project img {
-  max-width: 100%;  /* Bild bleibt im Container */
+  max-width: 100%;  
   height: auto;
   display: block;
   filter: brightness(85%);
-}
+} 
+
 
 
 
