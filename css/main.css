@@ -73,67 +73,40 @@ body
 
 
 
-.container {
-  max-width: 1320px;
-  margin: 0 auto;
-  padding: 0 20px; 
+
+
+
+/* ======================= */
+/* Media Queries           */
+/* ======================= */
+
+/* Tablet: Layout behalten, aber enger + kleinere Schrift */
+@media (max-width: 900px) {
+  .nav-list { gap: 40px; }        /* von 80 → 40 */
+  .nav-link { font-size: 20px; }  /* von 26 → 20 */
 }
 
+/* Handy: Layout umstellen – Spalte, Wrap, zentrieren */
+@media (max-width: 600px) {
+  .navbar {
+    flex-direction: column;       /* Logo oben, Nav darunter */
+    align-items: stretch;
+    padding: 12px 16px;           /* etwas kompakter */
+  }
 
-.motto {
-  background: #222;   
-  color: #fff;
-  padding: 80px 0 20px; 
+  .nav { 
+    padding: 0;                   /* Innenabstand zurücknehmen */
+    background: transparent;      /* Farbe weg, Navbar dominiert */
+  }
+
+  .nav-list {
+    justify-content: center;      /* Links zentrieren */
+    flex-wrap: wrap;              /* dürfen umbrechen */
+    gap: 12px 18px;               /* Reihen- und Spaltenabstand */
+  }
+
+  .nav-link { font-size: 18px; }
 }
-
-.motto-title {
-  margin: 0;
-  font-size: 56px;
-  line-height: 1.2;
-}
-
-.motto-subtitle {
-  margin: 0 0 20px 0;
-  font-size: 18px;
-  opacity: 0.9;
-}
-
-
-.author-project {
-  background: #222;
-  color: white;
-  padding: 40px 0;
-}
-.author {
-  display: flex;
-  align-items: center;
-}
-.avatar {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  margin-right: 15px;
-  margin-bottom: 30px; 
-}
-.author-info h3 {
-  margin: 0;
-  font-size: 16px;
-}
-.author-info p {
-  margin: 0;
-  font-size: 14px;
-  opacity: 0.8;
-}
-
-.author-project img {
-  max-width: 100%;  
-  height: auto;
-  display: block;
-  filter: brightness(85%);
-} 
-
-
-
 
 
 
