@@ -175,113 +175,97 @@ body
 
 
 /*Consultation Bereich*/
-.consultation__container{
-  background-color: blueviolet;
-  padding: 10px 10px;
-  width: 100%;  
+.base-container {
   display: flex;
-  margin: 10px auto;
-  
-}
-
-.consultation__left{
-  background: aqua;
-  flex: 1;
-  display: flex;  
-  justify-content: flex-end;                  
   align-items: center;
-  padding: 20px;
+  background-color: aliceblue;
+  padding: 10px 10%;
   
 }
 
-.consultation__left-box{
-  background-color: chartreuse;
-  padding: 10px;
-  max-width: 600px;   
-  width: 100%;
+.left-side{
+  flex: 1;
+  padding: 10px 10px;
 }
 
-.consultation__left h2{
-  font-size: 26px;
+.left-side h2{
+  font-size: 22px;
   font-weight: normal;
-  margin-bottom: 20px;
-  
 }
 
-.consultation__left p{
-  font-size: 8px;
-  margin-bottom: 20px;
+.left-side p{
+  font-size: 10px;
 }
 
-.consultation__form{
+.form{
   display: flex;
   flex-direction: column; 
-  gap: 20px;   
-  width: 100%; 
-  
+  gap: 15px;
 }
 
-.consultation__form input {
-  padding: 14px;
-  font-size: 14px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  
-}
-
-
-.consultation__phone {
+#form-container {
   display: flex;
-  gap: 8px;
+  gap: 1px;   
 }
 
-.consultation__country {
-  padding: 12px;
-  font-size: 14px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  background: #fff;
+#input-name {
+  height: 30px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
-.consultation__phone input {
-  flex: 1;
+#select-country {
+  height: 30px;
+  flex: 0 0 90px; 
+  box-sizing: border-box;
 }
 
-.consultation__form button {
+#input-phone {
+  height: 30px;
+  flex: 1; 
+  box-sizing: border-box;
+}
+
+#input-button{
+  width: auto;     
   align-self: flex-start; 
-  width: auto;            
-  padding: 10px 10px;
-  font-size: 12px;
+  height: 22px;
   border-radius: 25px;
-  border: none; 
-  margin-top: 40px;
+  border-style: none;
+  background-color: #f9b300;
 }
 
 
-.consultation__right {
-  background-color: burlywood;
+.right-side{
   flex: 1;
-  display: flex;              /* Flex einschalten */
-  flex-direction: column;     /* Bild + Text untereinander */
-  align-items: center;        /* horizontal zentriert */
-  justify-content: center;    /* vertikal zentriert */
+  padding: 10px 10px;
+  display: flex;            
+  justify-content: center;    
+  align-items: center; 
+}
+
+#avatar-container{
+  padding: 0px 0px;
+  display: flex;
+  flex-direction: column;   /* untereinander */
+  justify-content: center;  /* vertikal mittig */
+  align-items: center;
+}
+
+.profile-img {
+  width: 200px;        /* Größe anpassen */
+  height: 200px;
+  object-fit: cover;   /* Bild nicht verzerren */
+  border-radius: 50%;  /* Kreis */
+  border: 2px solid #f9b300; /* gelber Rahmen wie im Screenshot */
 }
 
 
-.consultation__image {
-  width: 280px;              /* Größe */
-  height: 280px;
-  object-fit: cover;         /* Bild bleibt korrekt proportioniert */
-  border-radius: 50%;        /* Kreis */
-  border: 3px solid #f0b500; /* goldener Rahmen */
-  padding: 5px;              /* optional: innen Luft zwischen Bild und Rahmen */
+.right-side p{
+  font-size: 12px;
+  font-weight: normal;
 }
 
-.consultation__right p {
-  margin-top: 10px;
-  font-size: 14px;
-  color: #333;
-}
 
 
 
