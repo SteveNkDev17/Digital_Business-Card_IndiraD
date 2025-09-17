@@ -175,61 +175,78 @@ body
 
 
 /*Consultation Bereich*/
-.container-consultation{
+.consultation__container{
   background-color: blueviolet;
   padding: 10px 10px;
   width: 100%;  
   display: flex;
   margin: 10px auto;
   
-
 }
 
-.consultation-left{
-  background-color: aqua;
-  padding: 20px;
+.consultation__left{
+  background: aqua;
   flex: 1;
-  text-align: right;
-  height: 400px;
+  padding: 4% 2% 6% 10%;
 }
 
-
-.form{
-  margin-left: 80px;
-  padding: 20px;
-  background-color: #f0b500;
-  display: block; 
-  text-align: left;
-}
-
-.consultation-form h2 {
-  font-size: 10px;
-  font-weight: bold;
+.consultation__left h2{
+  font-size: 26px;
+  font-weight: normal;
+  margin-bottom: 20px;
   
 }
 
-.consultation-form p {
-  color: #444;
-  font-size: 6px;
+.consultation__left p{
+  font-size: 8px;
+  margin-bottom: 20px;
 }
 
-.form-section input {
-  width: 100%;
-  padding: 15px;
-  margin-bottom: 15px;
-  border: 1px solid #eee;
-  border-radius: 3px;
+.consultation__form{
+  display: flex;
+  flex-direction: column; 
+  gap: 20px;
+  max-width: 600px;   
+  width: 100%; 
   
 }
 
-.form-section button {
-  background: #f0b500;
-  color: #000;
-  padding: 15px 25px;
-  border: none;
+.consultation__form input {
+  padding: 14px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  
+}
+
+
+.consultation__phone {
+  display: flex;
+  gap: 8px;
+}
+
+
+
+.consultation__country {
+  padding: 12px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background: #fff;
+}
+
+.consultation__phone input {
+  flex: 1;
+}
+
+.consultation__form button {
+  align-self: flex-start; 
+  width: auto;            
+  padding: 10px 10px;
+  font-size: 12px;
   border-radius: 25px;
-  font-size: 16px;
-  cursor: pointer;
+  border: none; 
+  margin-top: 40px;
 }
 
 
@@ -238,14 +255,13 @@ body
 
 
 
-
-.consultation-right{
+.consultation__right{
   background-color: antiquewhite;
-  padding: 20px;
   flex: 1;
-  text-align: center;
+  padding: 20px 20px; 
   
 }
+
 
 
 

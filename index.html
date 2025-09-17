@@ -62,22 +62,33 @@
 
 
       <!-- Section Consultation -->
-      <section class="section-consultation">
-        <div class="container-consultation">
+      <section class="consultation">
+        <div class="consultation__container">
           
-          <div class="consultation-left">
-            <div class="form"> 
-              <h2>БЕСПЛАТНАЯ <span>КОНСУЛЬТАЦИЯ</span><br> ОТ ДИЗАЙНЕРА</h2>
-              <p>Заполняйте заявку, чтобы получить ответы на все ваши вопросы о дизайне интерьера от квалифицированного специалиста.</p>
-              <form>
+          <div class="consultation__left">
+          
+            <h2>БЕСПЛАТНАЯ <span>КОНСУЛЬТАЦИЯ</span><br> ОТ ДИЗАЙНЕРА</h2>
+            <p>Заполняйте заявку, чтобы получить ответы на все ваши вопросы о дизайне интерьера от квалифицированного специалиста.</p>
+
+            <form class="consultation__form">
                 <input type="text" placeholder="Ваше имя">
-                <input type="tel" placeholder="(066) 147 91 51">
-                <button type="submit">Отправить заявку →</button>
-              </form>
-            </div>
+                
+                <div class="consultation__phone">
+                  <select class="consultation__country">
+                    <option value="+38">🇺🇦 +38</option>
+                    <option value="+49">🇩🇪 +49</option>
+                    <option value="+1">🇺🇸 +1</option>
+                    <option value="+48">🇵🇱 +48</option>
+                  </select>
+                  <input type="tel" placeholder="(066) 147 91 51">
+                </div>
+
+                <button type="submit" class="consultation__button">Отправить заявку →</button>
+            </form>
+            
           </div>
           
-          <div class="consultation-right">
+          <div class="consultation__right">
             <p>"Container Right"</p>
           </div>  
 
