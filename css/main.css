@@ -187,7 +187,18 @@ body
 .consultation__left{
   background: aqua;
   flex: 1;
-  padding: 4% 2% 6% 10%;
+  display: flex;  
+  justify-content: flex-end;                  
+  align-items: center;
+  padding: 20px;
+  
+}
+
+.consultation__left-box{
+  background-color: chartreuse;
+  padding: 10px;
+  max-width: 600px;   
+  width: 100%;
 }
 
 .consultation__left h2{
@@ -205,8 +216,7 @@ body
 .consultation__form{
   display: flex;
   flex-direction: column; 
-  gap: 20px;
-  max-width: 600px;   
+  gap: 20px;   
   width: 100%; 
   
 }
@@ -224,8 +234,6 @@ body
   display: flex;
   gap: 8px;
 }
-
-
 
 .consultation__country {
   padding: 12px;
@@ -250,17 +258,31 @@ body
 }
 
 
-
-
-
-
-
-.consultation__right{
-  background-color: antiquewhite;
+.consultation__right {
+  background-color: burlywood;
   flex: 1;
-  padding: 20px 20px; 
-  
+  display: flex;              /* Flex einschalten */
+  flex-direction: column;     /* Bild + Text untereinander */
+  align-items: center;        /* horizontal zentriert */
+  justify-content: center;    /* vertikal zentriert */
 }
+
+
+.consultation__image {
+  width: 280px;              /* Größe */
+  height: 280px;
+  object-fit: cover;         /* Bild bleibt korrekt proportioniert */
+  border-radius: 50%;        /* Kreis */
+  border: 3px solid #f0b500; /* goldener Rahmen */
+  padding: 5px;              /* optional: innen Luft zwischen Bild und Rahmen */
+}
+
+.consultation__right p {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #333;
+}
+
 
 
 
