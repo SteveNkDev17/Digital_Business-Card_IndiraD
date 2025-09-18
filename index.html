@@ -28,21 +28,13 @@
     </header>
     
     <main>
-      <section class="section-motto">
-        <div class="container-motto">
-          <h1 class="motto-title">We Design Spaces That Inspire</h1>
-          <p class="motto-subtitle">Timeless interiors, tailored to your lifestyle.</p>
-        </div>
-      </section>
-
-      <section class="section-heroimage">
-        <div class="container-heroimage">
-          <img src="images/bild001.jpg" alt="Modernes Wohnzimmer"> 
-        </div>
+      
+      <section class="section bg-dark">
+        
       </section>
 
       <!-- Section Gallery -->
-      <section class="section-gallery">
+      <section class="section bg-light">
         <h2 class="section-gallery-title">MY PROJECTS</h2>
         <div class="container-gallery">
           <div class="gallery-item"><img src="images/gal1.jpg"></div>
@@ -55,8 +47,8 @@
       </section>
 
       <!-- Section Preise -->
-      <section class="section-prices">
-        <div class="container-prices">
+      <section class="section bg-dark">
+        <div class="container">
           <h2> Interior Design Prices in New York</h2>
           <table class="pricing">
             <thead>
@@ -183,39 +175,25 @@
         </div>
       </section>
 
-
-
-
-
-
-
-
-
-
-
-
       <!-- Section Consultation -->
-      <section id="consultation">
-        
-        <div class="base-container">
-          
-          <div class="left-side">
+      <section class="section bg-light">
+        <div class="container row">
+          <div class="col">
               <h2>FREE <span>CONSULTATION</span><br> WITH AN INTERIOR DESIGNER</h2>
               <p>Complete the form to receive professional answers to all your interior design questions.</p>
               <form class="form">
-                <input id="input-name" type="text" placeholder="Your name">
-                <div id="form-container">
-                  <select id="select-country">
+                <input id="consultation-name" type="text" placeholder="Your name">
+                <div class="row-small-gap">
+                  <select id="consultation-country-code">
                     <option value="+1">🇺🇸 +1</option>
                     <option value="+49">🇩🇪 +49</option>
                   </select>
-                  <input id="input-phone" type="tel" placeholder="(066) 147 91 51">
+                  <input id="consultation-phone" type="tel" placeholder="(066) 147 91 51">
                 </div>
-                <button id="input-button"type="submit">Send Request→</button>
+                <button id="consultation-submit"type="submit">Send Request→</button>
               </form>
           </div>
-          
-          <div class="right-side">
+          <div class="col">
             <div id="avatar-container"> 
               <img src="images/autor.jpeg" alt="Indira" class="profile-img">
               <p>Indira | Lead Designer</p>
