@@ -143,34 +143,56 @@ body
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 /*Preise Bereich*/
 .section-prices{
+  background-color: white;
+  padding: 60px 0;
+
+}
+.container-prices{
+  background-color: aliceblue;
   width: 100%;
-  box-sizing: border-box;
-  padding: 20px;
-  border-bottom: 2px solid gray; 
+  max-width: 1400px;
+  margin: 0 auto; 
 }
 
-.container-prices{
+.pricing {
+  background-color: aliceblue;
   width: 100%;
-  height: 400px;
-  max-width: 1400px;
-  margin: 0 auto;
+  border-collapse: collapse;
   text-align: center;
 }
+
+.pricing th, 
+.pricing td {
+  border: 1px solid #ddd;
+  padding: 12px;
+}
+
+.pricing thead th {
+  background: #333;
+  color: #fff;
+}
+
+.pricing .highlight {
+  background: #f4b400; /* Gelb für "Alles Inklusive" */
+  color: #000;
+}
+
+.pricing tfoot td {
+  font-weight: bold;
+}
+
+
+
+
+
+
+
+
+
+
+
 
 
 
