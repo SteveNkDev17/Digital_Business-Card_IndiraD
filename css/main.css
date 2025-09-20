@@ -164,13 +164,13 @@ body
 
 .table-header-cell{
   color: #fff;
-  
+  font-weight: normal;
 }
 
 .table-cell-highlight{
   background: #f4b400; 
   color: #000;
-  
+  font-weight: bold;
 }
 
 .table-cell-feature,
