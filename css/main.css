@@ -140,35 +140,46 @@ body
   font-weight: normal;
   color: white;
 }
-.pricing {
+.pricing-table {
   background-color: aliceblue;
   width: 100%;
   border-collapse: collapse;
   text-align: center;
 }
 
-.pricing th, 
-.pricing td {
-  border: 1px solid #ddd;
-  padding: 12px;
-}
-
-.pricing thead th {
+.table-header{
   background: #333;
-  color: #fff;
-  font-weight: normal;
 }
 
-.text-left {
+.table-header-cell,
+.table-cell-highlight,
+.table-cell-feature,
+.table-cell-option,
+.table-cell-total,
+.table-cell-summary
+{
+  border: 1px solid #ddd;
+  padding: 10px;
+}
+
+.table-header-cell{
+  color: #fff;
+  
+}
+
+.table-cell-highlight{
+  background: #f4b400; 
+  color: #000;
+  
+}
+
+.table-cell-feature,
+.table-cell-total{
   text-align: left;
 }
 
-.pricing .highlight {
-  background: #f4b400; 
-  color: #000;
-}
-
-.pricing tfoot td {
+.table-cell-total,
+.table-cell-summary{
   font-weight: bold;
 }
 
