@@ -58,7 +58,7 @@ body
   text-align: center;
   font-size: 28px;
   font-weight: bold;
-  color: beige;
+  color: #f9f9f9;
 }
 
 .nav{
@@ -83,7 +83,7 @@ body
 .nav-link {
   text-decoration: none;
   font-size: 16px;
-  color: beige;
+  color: #f9f9f9;
   padding: 8px 16px;/*Klickbereich*/
   display: block;       /* Link füllt das ganze li */
   text-align: center;   /* Text mittig */
@@ -129,19 +129,12 @@ body
 
 
 /*Preise Bereich*/
-.container-prices{
-  background-color: aliceblue;
-  width: 100%;
-  max-width: 1400px;
-  margin: 0 auto; 
-}
-
 #pricing-heading{
   font-weight: normal;
   color: white;
 }
 .pricing-table {
-  background-color: aliceblue;
+  background-color: #f9f9f9;
   width: 100%;
   border-collapse: collapse;
   text-align: center;
@@ -322,7 +315,7 @@ body
 }
 
 #footer-logo h2 {
-  color: #fff;
+  color: #f9f9f9;
   font-size: 34px;
   font-weight: bolder;
   margin: 0;
