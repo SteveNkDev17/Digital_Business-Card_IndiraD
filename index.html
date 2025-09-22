@@ -252,14 +252,34 @@
                 <h2 id="consultation-h2">FREE <span>CONSULTATION</span><br> WITH AN INTERIOR DESIGNER</h2>
                 <p id="consultation-p">Complete the form to receive professional answers to all your interior design questions.</p>
                 <form id="consultation-form">
-                  <input id="consultation-name" type="text" placeholder="Your name">
+                  <input 
+                    id="consultation-name" 
+                    type="text" 
+                    placeholder="Your name"r
+                    equired>
+                  <input 
+                    id="consultation-email" 
+                    type="email" 
+                    placeholder="Your email address"
+                    required>
                   <div id="small-gap">
                     <select id="consultation-country-code">
                       <option value="+1">🇺🇸 +1</option>
                       <option value="+49">🇩🇪 +49</option>
                     </select>
-                    <input id="consultation-phone" type="tel" placeholder="(066) 147 91 51">
+                    <input 
+                      id="consultation-phone" 
+                      type="tel" 
+                      placeholder="(066) 147 91 51"
+                      required>
                   </div>
+                  <textarea 
+                      id="consultation-message" 
+                      name="message" 
+                      placeholder="Your message" 
+                      rows="5" 
+                      required>
+                  </textarea>
                   <button id="consultation-submit"type="submit">Send Request→</button>
                 </form>
             </div>
