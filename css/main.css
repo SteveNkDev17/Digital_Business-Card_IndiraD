@@ -47,12 +47,10 @@ body
   top: 0;
   left: 0;
   margin: 0 auto; 
-  padding: 20px;  
+  padding: 10px;  
   display: flex;
   justify-content: space-between;
   align-items: center;
-  
-  
   background: rgba(0,0,0,0.6); 
   z-index: 10; 
 }
@@ -92,10 +90,12 @@ body
   position: absolute;
   top: 100%;
   left: 0;
-  background: #222;
   list-style: none;
   padding: 10px;
   min-width: 180px;
+  background: rgba(0,0,0,0.4);
+  backdrop-filter: blur(8px); /* leichter Unschärfe-Effekt */
+  border-radius: 2px;
 }
 
 .submenu li a {
@@ -103,10 +103,12 @@ body
   padding: 8px 12px;
   color: #fff;
   text-decoration: none;
+  transition: background-color 0.3s;
 }
 
 .submenu li a:hover {
-  background: #444;
+  background-color: rgba(255,255,255,0.2);
+  border-radius: 2px;
 }
 
 .dropdown:hover .submenu {
@@ -114,18 +116,31 @@ body
 }
 
 
-.nav-link {
+.nav-link,
+.nav-link-list
+ {
   text-decoration: none;
-  font-size: 12px;
   color: #f9f9f9;
-  padding: 8px 16px;/*Klickbereich*/
+  padding: 8px 14px;/*Klickbereich*/
   display: block;       /* Link füllt das ganze li */
   text-align: center;   /* Text mittig */
 }
 
-.nav-link:hover { 
-  color: gold;
+.nav-link:hover {
+  color: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.5); /* leichter Schatten nach unten */
+  border-radius: 4px;
+  
 }
+
+.nav-link-list:hover{
+  color: #fff;  
+  text-shadow: 0 0 8px rgba(255,255,255,0.5);
+}
+
+
+
+
 /* ######################################################### */
 
 
