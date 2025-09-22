@@ -16,7 +16,7 @@ body
   width: 100%;
 }
 .section.bg-dark {
-  background-color: #111;
+  background-color: #222;
   
 }
 .section.bg-light {
@@ -199,7 +199,7 @@ body
 }
 
 #consultation-col-left{
-  padding: 20px 20px; 
+  padding: 20px 10px; 
 }
 
 #consultation-col-right {
@@ -260,9 +260,10 @@ body
 #consultation-country-code:focus,
 #consultation-message:focus {
   outline: none;
-  border-color: #f4b400;
+  border: 1px solid grey;     
   box-shadow: 0 0 4px #f4b400;
 }
+
 
 
 #consultation-submit{
@@ -294,18 +295,96 @@ body
 /* ######################################################### */
 
 /* ######################## Footer ########################### */
-.footer {
+.site-footer {
   width: 100%;
-  padding: 40px 20px;
-  background: #111;           
-  color: beige;
+  background: #222;
+  color: #ccc;
+  padding: 20px;
 }
 
 .footer-container {
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
-  text-align: center;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 240px;
+  flex-wrap: wrap;
 }
+
+
+#footer-logo{
+  display: flex;        
+  justify-content: center;
+  align-items: center;
+  flex: 0 0 auto;
+}
+
+#footer-logo h2 {
+  color: #fff;
+  font-size: 34px;
+  font-weight: bolder;
+  margin: 0;
+  line-height: 1.2;
+}
+
+#footer-info-container {
+  display: flex;
+  flex: 1;                   
+  justify-content: space-between; 
+  align-items: flex-start;   
+  padding: 20px;
+  box-sizing: border-box;
+  flex-wrap: wrap;           
+}
+
+.footer-col {
+  flex: 1;                   
+  min-width: 200px;          
+  max-width: 300px;          
+  padding: 10px 15px;
+  box-sizing: border-box;
+}
+
+
+.footer-col h4 {
+  color: #aaa;
+  font-size: 16px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-col ul li {
+  margin-bottom: 6px;
+  color: #ccc;
+}
+
+
+.footer-col a {
+  color: #ccc;
+  text-decoration: none;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 13px;
+  color: #888;
+}
+
+
+
+
+
+
 /* ######################################################### */
 
 
