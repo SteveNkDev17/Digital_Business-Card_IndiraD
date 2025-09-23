@@ -61,7 +61,7 @@ body
   text-align: center;
   font-size: 18px;
   font-weight: bold;
-  color: #f9f9f9;
+  color: #e8d6a5;
 }
 
 .nav{
@@ -238,7 +238,7 @@ body
 }
 
 .table-cell-highlight{
-  background: #f4b400; 
+  background: #e8d6a5; 
   color: #000;
   font-weight: bold;
 }
@@ -342,7 +342,7 @@ body
   height: 22px;
   border-radius: 25px;
   border-style: none;
-  background-color: #f9b300;
+  background-color: #e8d6a5;
 }
 
 #consultation-avatar
@@ -360,7 +360,7 @@ body
   height: 200px;
   object-fit: cover;   
   border-radius: 50%; 
-  border: 2px solid #f9b300; 
+  border: 2px solid #e8d6a5; 
 }
 /* ######################################################### */
 
@@ -393,7 +393,7 @@ body
 }
 
 #footer-logo h2 {
-  color: #f9f9f9;
+  color: #e8d6a5;
   font-size: 34px;
   font-weight: bolder;
   margin: 0;
