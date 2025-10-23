@@ -108,6 +108,7 @@ body
   background: rgba(0,0,0,0.4);
   backdrop-filter: blur(8px); /* leichter Unschärfe-Effekt */
   border-radius: 2px;
+  z-index: 999;
 }
 
 .submenu li a {
@@ -424,22 +425,14 @@ body
   flex-wrap: wrap;
 }
 
-
-#footer-logo{
-  padding: 20px;
-  display: flex;        
-  justify-content: center;
-  align-items: center;
-  flex: 0 0 auto;
+.footer-logo img {
+  display: block;
+  height: 140px;      /* anpassen je nach gewünschter Größe */
+  width: auto;
+  object-fit: contain;
 }
 
-#footer-logo h2 {
-  color: #e8d6a5;
-  font-size: 34px;
-  font-weight: bolder;
-  margin: 0;
-  line-height: 1.2;
-}
+
 
 #footer-info-container {
   display: flex;
