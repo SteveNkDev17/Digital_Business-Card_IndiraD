@@ -63,8 +63,6 @@ body
   box-sizing:border-box;
   overflow:visible;    
 
-  /* Farbverlauf mit leichtem Transparent-Effekt nach unten */
-  background: linear-gradient(to bottom, #4d3d30 66%, rgba(77, 61, 48, 0.8) 100%);
 }
 
 /* ====== Untere Abschlusslinie der Navbar (feiner Goldton, leicht transparent) ====== */
