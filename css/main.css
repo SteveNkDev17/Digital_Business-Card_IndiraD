@@ -67,14 +67,15 @@ body
   background: linear-gradient(to bottom, #4d3d30 66%, rgba(77, 61, 48, 0.8) 100%);
 }
 
+/* ====== Untere Abschlusslinie der Navbar (feiner Goldton, leicht transparent) ====== */
 .navbar::after {
   content: "";
   position: absolute;
   left: 0;
   right: 0;
   bottom: 0;
-  height: 2px;
-  background: rgba(162, 126, 78, 0.4); /* dein Goldton, leicht transparent */
+  height: 1px;
+  background: rgba(162, 126, 78, 0.4);
 }
 
 
