@@ -297,7 +297,7 @@ body
 
 #pricing-heading{
   font-weight: normal;
-  color: white;
+  color: #A27E4E;
 }
 .pricing-table {
   background-color: #f9f9f9;
@@ -307,7 +307,7 @@ body
 }
 
 .table-header{
-  background: #f9f9f9;
+  background: #A27E4E;
 }
 
 .table-header-cell,
