@@ -150,9 +150,13 @@ body
   backdrop-filter: blur(6px);     /* leichter Weichzeichner für edlen Glas-Effekt */
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25); /* dezenter Schatten für Tiefe */
 
-  border-radius: 6px;
+  border: 1px solid rgba(162, 126, 78, 0.4); /* feiner Goldrand, leicht transparent */
+  border-radius: 4px;
   z-index: 999;
 }
+
+
+
 
 /* Stil der Links im Dropdown-Menü */
 .submenu li a {
