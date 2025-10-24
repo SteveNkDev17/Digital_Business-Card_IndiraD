@@ -108,7 +108,7 @@ body
   margin: 0;
   padding: 0;
   display: flex;   
-  gap: 20px; 
+  gap: 5px; 
 }
 
 /* Einzelne Menü-Punkte (LI) */
@@ -184,6 +184,9 @@ body
   padding: 8px 14px;/*Klickbereich*/
   display: block;       /* Link füllt das ganze li */
   text-align: center;   /* Text mittig */
+
+  width: 120px;              /* ⬅️ Ergänzung hier: alle gleich breit */
+  box-sizing: border-box;    /* ⬅️ damit padding korrekt eingerechnet wird */
 }
 
 /* Hover-Effekt für Hauptlinks (leichter Leuchteffekt) */
