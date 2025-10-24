@@ -190,6 +190,7 @@ body
 .nav-link:hover {
   color: #A27E4E;
   box-shadow: 0 2px 8px rgba(0,0,0,0.5); /* leichter Schatten nach unten */
+  border: 0.5px solid rgba(162, 126, 78, 0.4); /* feiner Goldrand, leicht transparent */
   border-radius: 4px;
   text-shadow: 0 0 8px rgba(241, 230, 147, 0.5);
 }
