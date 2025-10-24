@@ -19,7 +19,7 @@ body
   width: 100%;
 }
 .section.bg-dark {
-  background-color: #222;
+  background-color: #222;               /*FRAGE: Wo genau ist es?????*/
   
 }
 .section.bg-light {
@@ -36,7 +36,7 @@ body
 }
 
 .container.bg-dark {
-  background-color: #111;
+  background-color: blue;     /*FRAGE: Wo genau ist es?????*/
   
 }
 .container.bg-light {
@@ -59,7 +59,9 @@ body
   background:#4d3d30; 
   z-index:10;
   box-sizing:border-box;
-  overflow:visible;                   
+  overflow:visible;    
+  
+  
 }
 
 .nav-logo{
@@ -105,7 +107,7 @@ body
   list-style: none;
   padding: 10px;
   min-width: 180px;
-  background: rgba(0,0,0,0.4);
+  background: #4d3d30;
   backdrop-filter: blur(8px); /* leichter Unschärfe-Effekt */
   border-radius: 2px;
   z-index: 999;
@@ -114,7 +116,7 @@ body
 .submenu li a {
   display: block;
   padding: 8px 12px;
-  color: #fff;
+  color: #A27E4E;
   text-decoration: none;
   transition: background-color 0.3s;
 }
@@ -133,21 +135,21 @@ body
 .nav-link-list
  {
   text-decoration: none;
-  color: #f9f9f9;
+  color: #A27E4E;
   padding: 8px 14px;/*Klickbereich*/
   display: block;       /* Link füllt das ganze li */
   text-align: center;   /* Text mittig */
 }
 
 .nav-link:hover {
-  color: #fff;
+  color: #A27E4E;
   box-shadow: 0 2px 8px rgba(0,0,0,0.5); /* leichter Schatten nach unten */
   border-radius: 4px;
   
 }
 
 .nav-link-list:hover{
-  color: #fff;  
+  color: #A27E4E;  
   text-shadow: 0 0 8px rgba(255,255,255,0.5);
 }
 
@@ -239,7 +241,7 @@ body
 /*Preise Bereich*/
 #prices{
   width: 100%;
-  background-color: #222;
+  background-color: #4d3d30;
 }
 
 #pricing-heading{
@@ -254,7 +256,7 @@ body
 }
 
 .table-header{
-  background: #333;
+  background: #4d3d30;
 }
 
 .table-header-cell,
@@ -409,7 +411,7 @@ body
 /* ######################## Footer ########################### */
 .site-footer {
   width: 100%;
-  background: #222;
+  background: #4d3d30;
   color: #ccc;
   padding: 10px;
 }
