@@ -1,52 +1,60 @@
-
+<!-- ====== HTML-DOKUMENT ====== -->
 <!DOCTYPE html>
 <html lang="en-US">
-
+  <!-- ====== HEAD-BEREICH ====== -->
   <head>
+    <!-- Meta-Daten-->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title> Oyu-design.com </title>
-    <!-- CSS einbinden -->
+    <!-- CSS-Datei einbinden -->
     <link rel="stylesheet" href="css/main.css" />
+    <!-- JS-Datei einbinden -->
+     <!-- Fehlt!!! -->
   </head>
+  <!-- ====== /HEAD-BEREICH ====== -->
 
-
+  <!-- ====== BODY-BEREICH ====== -->
   <body>
-
-    <header class="navbar">
-      <a href="/" class="nav-logo">
+    <!-- ====== HEADER ====== -->
+    <header class="site-header">
+      <!-- === LOGO === -->
+      <a href="/" class="header-logo">
         <img src="images/logo.svg" alt="Design Interior Logo">
       </a>
-      <nav class="nav">
+      <!-- === /LOGO === -->
+      <!-- === MAIN-NAVIGATION === -->
+      <nav class="main-navigation">
         <ul class="nav-list">
-          <li class="list-item"><a class="nav-link" href="#home">Home</a></li>
-          <li class="list-item"><a class="nav-link" href="#about">About us</a></li>
-          
-          <li class="dropdown">
-            <a class="nav-link-list" href="#gallery">Gallery</a>
+          <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">About us</a></li>
+          <li class="dropdown-item">
+            <a class="dropdown-link" href="#gallery">Gallery</a>
             <ul class="submenu">
-              <li><a href="#">Living Rooms</a></li>
-              <li><a href="#">Kitchens</a></li>
-              <li><a href="#">Offices</a></li>
+              <li class="submenu-item"><a class="submenu-link" href="#">Living Rooms</a></li>
+              <li class="submenu-item"><a class="submenu-link" href="#">Kitchens</a></li>
+              <li class="submenu-item"><a class="submenu-link" href="#">Offices</a></li>
             </ul>
           </li>
-
-          <li class="list-item"><a class="nav-link" href="#prices">Prices</a></li>
-          <li class="dropdown">
-            <a class="nav-link-list" href="#services">Services</a>
+          <li class="nav-item"><a class="nav-link" href="#prices">Prices</a></li>
+          <li class="dropdown-item">
+            <a class="dropdown-link" href="#services">Services</a>
             <ul class="submenu">
-              <li><a href="#">Consultation</a></li>
-              <li><a href="#">Interior Design</a></li>
-              <li><a href="#">Project Management</a></li>
+              <li class="submenu-item"><a class="submenu-link" href="#">Consultation</a></li>
+              <li class="submenu-item"><a class="submenu-link" href="#">Interior Design</a></li>
+              <li class="submenu-item"><a class="submenu-link" href="#">Project Management</a></li>
             </ul>
           </li>
-          <li class="list-item"><a class="nav-link" href="#consultation">Contact us</a></li>
+          <li class="nav-item"><a class="nav-link" href="#consultation">Contact us</a></li>
         </ul>
       </nav>
+      <!-- === /MAIN-NAVIGATION === -->
     </header>
+    <!-- ====== /HEADER ====== -->
     
+
+    <!-- ====== MAIN CONTENT ====== -->
     <main>
-      
       <section class="bg-dark">
         
           <div id="hero-container"><img src="images/herobild.png" alt="Interior Hero"></div>
@@ -365,77 +373,67 @@
           </div>
         </div>
       </section>
-      
     </main>
+    <!-- ====== /MAIN CONTENT ====== -->
 
-      <!-- Impressum / Footer -->
-      <footer class="site-footer">
-        <div class="footer-container">
-          
-          <!-- Column 1: Logo -->
-          <div class="footer-logo">
-            <a href="/" aria-label="Startseite">
-              <img src="images/logo.svg" alt="Design Interior Logo">
-            </a>
+    <!-- ====== FOOTER ====== -->
+    <footer class="site-footer">
+      <div class="footer-container">
+        
+        <!-- Column 1: Logo -->
+        <div class="footer-logo">
+          <a href="/" aria-label="Startseite">
+            <img src="images/logo.svg" alt="Design Interior Logo">
+          </a>
+        </div>
+
+
+        <div id="footer-info-container">
+          <div class="footer-col">
+            <h4>LEGAL</h4>
+            <ul>
+              <li><a href="#">Imprint</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">Terms & Conditions</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
           </div>
 
+          <div class="footer-col">
+            <h4>CONTACT</h4>
+            <ul>
+              <li>Interior Design Inc.</li>
+              <li>123 Main Street</li>
+              <li>New York, NY 13001</li>
+              <li>+1 (212) 555-1234</li>
+              <li>info@example.com</li>
+            </ul>
+          </div>
 
-          <div id="footer-info-container">
-            <div class="footer-col">
-              <h4>LEGAL</h4>
-              <ul>
-                <li><a href="#">Imprint</a></li>
-                <li><a href="#">Privacy Policy</a></li>
-                <li><a href="#">Terms & Conditions</a></li>
-                <li><a href="#">Contact</a></li>
-              </ul>
-            </div>
-
-            <div class="footer-col">
-              <h4>CONTACT</h4>
-              <ul>
-                <li>Interior Design Inc.</li>
-                <li>123 Main Street</li>
-                <li>New York, NY 13001</li>
-                <li>+1 (212) 555-1234</li>
-                <li>info@example.com</li>
-              </ul>
-            </div>
-
-            <div class="footer-col">
-              <h4>CONNECT</h4>
-              <ul>
-                <li><a href="#">Facebook</a></li>
-                <li><a href="#">Instagram</a></li>
-                <li><a href="#">LinkedIn</a></li>
-                <li><a href="#">Newsletter Signup</a></li>
-              </ul>
-            </div>
-
+          <div class="footer-col">
+            <h4>CONNECT</h4>
+            <ul>
+              <li><a href="#">Facebook</a></li>
+              <li><a href="#">Instagram</a></li>
+              <li><a href="#">LinkedIn</a></li>
+              <li><a href="#">Newsletter Signup</a></li>
+            </ul>
           </div>
 
         </div>
 
+      </div>
 
-          
-          
 
-        <div class="footer-bottom">
-          <p>&copy; 2025 Interior Design Inc.</p>
-        </div>
-      </footer>
+        
+        
 
-    
+      <div class="footer-bottom">
+        <p>&copy; 2025 Interior Design Inc.</p>
+      </div>
+    </footer>
+    <!-- ====== /FOOTER ====== -->
   </body>
-
-
-
-
-
-
-
-
-
-
-
+  <!-- ====== /BODY-BEREICH ====== -->
 </html>
+<!-- ====== /HTML-DOKUMENT ====== -->
