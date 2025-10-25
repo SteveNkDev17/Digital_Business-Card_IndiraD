@@ -394,7 +394,7 @@ body
 
 .table-header{
   background: linear-gradient(to bottom, #4b3a2e 0%, #3c2f26 100%);
-  color: #e7dfcc;
+  color: #C49A63; 
   border-bottom: 1px solid #a27e4e;
 }
 
@@ -405,18 +405,26 @@ body
 .table-cell-total,
 .table-cell-summary
 {
-  border: 1px solid #ddd;
+  border: 1px solid #a9a891;
   padding: 10px;
 }
 
 .table-header-cell{
-  color: #A27E4E;
+  
   font-weight: normal;
+  letter-spacing: 0.3px;
 }
 
 .table-cell-highlight{
-  background: #dacbb1;
-color: #2a211a;
+  background: linear-gradient(
+  135deg,
+  #e1ce9b 0%,   /* sanftes Licht oben links */
+  #c4ab79 45%,  /* dein Grundton */
+  #b7955f 100%  /* leicht dunkler Bronze-Schluss */
+  );
+
+  color: #3c2f26;
+
   font-weight: bold;
 }
 
