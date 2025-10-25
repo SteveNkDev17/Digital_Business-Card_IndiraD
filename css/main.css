@@ -229,11 +229,11 @@ body
   /*Untermenü scrollt runter beim Draufzeigen*/
   display: block;
 }
-
-.dropdown-link:hover,
-.nav-link:hover{
+.nav-link:hover,
+.dropdown-link:hover
+{
   /* Beleuchtung beim Draufzeigen einschalten */
-  text-shadow: 0 0 8px rgba(241, 230, 147, 0.5);
+  text-shadow: 0 0 8px rgba(181, 172, 103, 0.5);
 }
 
 .nav-link:hover {
