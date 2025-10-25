@@ -44,37 +44,47 @@ body
 }
 
 /*====== HEADER ======*/
+/*=== HEADER-SELBST ===*/
 .site-header {
-  position: absolute;
+  /* Header posotionieren */
+  position: absolute; 
   top: 0;
   left: 0;
-  width: 100%;
 
-  display: flex;
+  /* Flexbox-Layout für Logo + Navigation */
+  display: flex; 
+  box-sizing: border-box;
   align-items: center;
   justify-content: space-between;
 
-  padding: 25px 40px;
-  height: clamp(70px, 8vw, 100px);
-
-  /* neuer Verlauf */
-  background: linear-gradient(
+  /* Breite, Innenabstand und dynamische Höhe(min–ideal–max) */
+  width: 100%;
+  padding: 25px 40px; 
+  height: clamp(70px, 8vw, 100px); 
+  
+  /* Hintergrund mit leichtem Verlauf für Tiefe */
+  background-color: rgba(77, 61, 48, 0.9); /* Fallback für ältere Browser */
+  background: linear-gradient
+  (
     to bottom,
-    rgba(77, 61, 48, 0.92) 0%,   /* oben etwas heller */
-    rgba(62, 49, 39, 0.96) 100%  /* unten minimal dunkler */
+    rgba(77, 61, 48, 0.92) 0%,   
+    rgba(62, 49, 39, 0.96) 100%  
   );
-  
+
+  /* moderner Glas-Effekt */
   backdrop-filter: blur(4px) saturate(110%);
-  -webkit-backdrop-filter: blur(4px) saturate(110%);
-  
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
-  z-index: 10;
-  box-sizing: border-box;
-  overflow: visible;
+  /* Safari-Fix */ 
+  -webkit-backdrop-filter: blur(4px) saturate(110%); 
+  /* weicher Schatten */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25); 
+  /* Header über anderen Elementen */
+  z-index: 10; 
+  /* damit geöffnetes Dropdown-Menü NICHT abgeschnitten wird.*/
+  overflow: visible; 
 }
 
-/* Goldene Akzentlinie bleibt */
 .site-header::after {
+  /* Goldene Akzentlinie drunter */
   content: "";
   position: absolute;
   left: 0;
@@ -83,12 +93,15 @@ body
   height: 0.5px;
   background: rgba(162, 126, 78, 0.4);
 }
+/*=== /HEADER-SELBST ===*/
 
-
+/*=== HEADER-LOGO ===*/
 .header-logo{
   height:100%;
   display:flex;                         
   align-items:center;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 .header-logo img{
@@ -97,47 +110,75 @@ body
   height:auto;                        
   width:auto;
 }
+/*=== /HEADER-LOGO ===*/
 
-
+/*=== NAVIGATIONSLEISTE ===*/
 .main-navigation {
   margin: 0;
   padding: 2px 2px;
 }
 
-
 .nav-list{
-  list-style: none;  
+  /* Entfernt Standard-Aufzählungspunkte */
+  list-style: none;
+  /* Entfernt Standardabstände (Browser-Vorgabe) */  
   margin: 0;
+  /* Kein Innenabstand */ 
   padding: 0;
-  display: flex;   
+  /* Ordnet Menüeinträge nebeneinander (horizontale Leiste) */
+  display: flex;  
+  /* Abstand zwischen den einzelnen Menüpunkten */ 
   gap: 5px; 
 }
-
 
 .nav-item{
   margin: 0;
   padding: 0;
 }
 
+.nav-link,
+.dropdown-link
+ {
+  text-decoration: none;
+  /* Verhindert, dass Padding/Border die Gesamtbreite vergrößern */
+  box-sizing: border-box; 
+  /* Link füllt das ganze li */
+  display: block; 
+  /*Klickbereich*/
+  padding: 8px 14px;
+  /* Text mittig */      
+  text-align: center; 
+  /*Mindestbreite für Menü-Buttons setzen*/
+  min-width: 120px;  
+  /* Textfarbe für Haupt-Navigationslinks (Menüleiste) */
+  color: #A27E4E;
+  /*Unsichtbarer Rahmen um die Menü-Buttons*/  
+  /*Der Rahmen wird später sichtbar beim :hover*/ 
+  border: 0.5px solid transparent;
+  border-radius: 4px;            
+}
 
 .dropdown-item{
+  /*Sorgt für das Anheften von submenu 
+  direkt unter den Menüpunkt.*/
   position: relative;
 }
 
-
-.dropdown-item:hover .submenu {
-  display: block;
-}
-
 .submenu {
+  /*Untermenu erst mal auf unsichtbar setzen*/
   display: none;
+  /*Position des Untermenüs*/
   position: absolute;
   top: 100%;
   left: 0;
-  list-style: none;
-  padding: 10px;
-  min-width: 180px;
 
+  list-style: none;
+  /*Seiteliche Abstände in dem Untermenu*/
+  padding: 10px;
+  /*Mindestbreite von dem Untermenü*/
+  min-width: 140px;
+  /*Hintergrund-Farbe von dem Untermenü,
+  Glas mit leichtem Farbverlauf*/
   background: linear-gradient(
     to bottom,
     rgba(90, 70, 50, 0.6) 0%,
@@ -145,10 +186,15 @@ body
     #4d3d30 40%,
     #3e3127 100%
   );
+  /*Farbe weicher machen*/
+  backdrop-filter: blur(6px);
+  /*Der Rahmen für das Untermenü*/
   border: 1px solid rgba(162, 126, 78, 0.4);
   border-radius: 4px;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
-  backdrop-filter: blur(6px);
+
+  /*Leichter Schaten herum*/
+  box-shadow: 0 6px 12px rgba(162, 126, 78, 0.4);
+  /*Überdeckung vermeiden*/
   z-index: 999;
 }
 
@@ -157,12 +203,20 @@ body
 }
 
 .submenu-link {
+  /* Link füllt das gesamte Listenelement (volle Klickfläche) */
   display: block;
+  /* Mindestbreite für die Menüpunkte*/
+  min-width: 180px;
+  /* Innenabstand für komfortables Klicken */
   padding: 8px 12px;
-  color: #A27E4E;
+  /* Entfernt Unterstreichung */
   text-decoration: none;
+  /* Textfarbe der Untermenü-Links */
+  color: #A27E4E;
+  /*Unsichtbarer Rahmen, sichtbar durch :hover*/
   border: 1px solid transparent;
   border-radius: 4px;
+  /*Klickfläche wird langsam eingeblendet*/
   transition: 0.3s;
 }
 
@@ -171,36 +225,24 @@ body
   background-color: rgba(151, 126, 101, 0.2);
 }
 
-
-
-.nav-link,
-.dropdown-link
- {
-  text-decoration: none;
-  color: #A27E4E;
-  padding: 8px 14px;/*Klickbereich*/
-  display: block;       /* Link füllt das ganze li */
-  text-align: center;   /* Text mittig */
-  border: 0.5px solid transparent;
-  border-radius: 4px;
-  width: 120px;              /* ⬅️ Ergänzung hier: alle gleich breit */
-  box-sizing: border-box;    /* ⬅️ damit padding korrekt eingerechnet wird */
+.dropdown-item:hover .submenu {
+  /*Untermenü scrollt runter beim Draufzeigen*/
+  display: block;
 }
 
+.dropdown-link:hover,
+.nav-link:hover{
+  /* Beleuchtung beim Draufzeigen einschalten */
+  text-shadow: 0 0 8px rgba(241, 230, 147, 0.5);
+}
 
 .nav-link:hover {
-  color: #A27E4E;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.5); /* leichter Schatten nach unten */
-  border-color: rgba(162, 126, 78, 0.4); /* feiner Goldrand, leicht transparent */
-  
-  text-shadow: 0 0 8px rgba(241, 230, 147, 0.5);
+  /* Buttons werden beim draufzeigen sichtbar */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.5); 
+  border-color: rgba(162, 126, 78, 0.4); 
 }
 
-/* Alternative Hover-Variante für Links in Listen (wenn extra Klasse verwendet wird) */
-.dropdown-link:hover{
-  color: #A27E4E;  
-  text-shadow: 0 0 8px rgba(241, 230, 147, 0.5);
-}
+/*=== /NAVIGATIONSLEISTE ===*/
 /*====== /HEADER ======*/
 
 
