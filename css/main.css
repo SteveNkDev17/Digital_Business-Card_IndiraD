@@ -222,7 +222,7 @@ body
 
 .submenu-link:hover {
   border-color: rgba(162, 126, 78, 0.4);
-  background-color: rgba(151, 126, 101, 0.2);
+  background-color: rgba(162, 126, 78, 0.18);
 }
 
 .dropdown-item:hover .submenu {
@@ -246,15 +246,8 @@ body
 /*====== /HEADER ======*/
 
 
-
-
-
-
-
-
-
-/* ######################## Main ########################### */
-/*Hero Bereich*/
+/*====== Main ======*/
+/*=== Hero-Bereich ===*/
 #hero-container {
   height: 100vh;        
   position: relative;
@@ -267,9 +260,9 @@ body
   filter: brightness(70%);
   display: block;
 }
+/*=== /Hero Bereich ===*/
 
-
-/*Gallery Bereich*/
+/*=== Gallery Bereich ===*/
 .gallery {
   max-width: 1400px;
   margin: 0 auto;
@@ -308,7 +301,6 @@ body
   transform: scale(1.05);
 }
 
-/* Overlay */
 .overlay {
   position: absolute;
   top: 0; left: 0; right: 0; bottom: 0;
@@ -332,10 +324,9 @@ body
 .gallery-item:hover .overlay {
   opacity: 1;
 }
+/*=== /Gallery Bereich ===*/
 
-
-
-/*Preise Bereich*/
+/*=== Preise Bereich === */
 #prices{
   width: 100%;
   background-color: white;
@@ -387,10 +378,9 @@ body
 .table-cell-summary{
   font-weight: bold;
 }
+/*=== /Preise Bereich === */
 
-
-/*Consultation Bereich*/
-
+/*=== Consultation Bereich ===*/
 #consultation{
   width: 100%;
   background-color: #f9f9f9;
@@ -475,8 +465,6 @@ body
   box-shadow: 0 0 4px #f4b400;
 }
 
-
-
 #consultation-submit{
   width: auto;     
   align-self: flex-start; 
@@ -503,9 +491,11 @@ body
   border-radius: 50%; 
   border: 2px solid #e8d6a5; 
 }
-/* ######################################################### */
+/*=== /Consultation Bereich ===*/
+/*====== /Main ======*/
 
-/* ######################## Footer ########################### */
+
+/*====== Footer ======*/
 .site-footer {
   width: 100%;
   background: #4d3d30;
@@ -530,8 +520,6 @@ body
   width: auto;
   object-fit: contain;
 }
-
-
 
 #footer-info-container {
   display: flex;
@@ -583,13 +571,8 @@ body
   font-size: 13px;
   color: #888;
 }
+/*====== /Footer ======*/
 
-
-
-
-
-
-/* ######################################################### */
 
 
 
