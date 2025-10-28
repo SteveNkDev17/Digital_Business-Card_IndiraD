@@ -285,6 +285,7 @@ body
 
 /*=== Gallery Bereich ===*/
 #gal-section{
+  /*Dieser Hintergrund gilt für alle Elemente*/
   background: linear-gradient(
   to bottom,
   #f8ecda 0%,   /* очень светлый кремовый сверху */
@@ -294,6 +295,7 @@ body
 }
 
 #gal-main {
+
   background: transparent;
   
   
@@ -308,7 +310,6 @@ body
 /*= Heading =*/
 #gal-heading{
   background: transparent;
-  
 }
 
 #gal-heading h2 {
@@ -381,6 +382,12 @@ body
   margin-top: 0;
   margin-bottom: 0;
   color: #7a5b3d; 
+}
+
+.gal-caption h3:hover {
+  color: #a27e4e; /* dein Goldbraun-Ton */
+  text-shadow: 0 0 6px rgba(194, 159, 99, 0.5); /* leichter goldener Glow */
+  transform: scale(1.03); /* minimaler Zoom für Interaktivität */
 }
 
 .gal-item img {
