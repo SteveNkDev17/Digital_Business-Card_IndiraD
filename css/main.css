@@ -262,7 +262,6 @@ body
 
 /*====== Main ======*/
 /*=== Hero-Bereich ===*/
-
 #hero{
   /* Fallback für alte Browser */
   background: #4d3d30; 
@@ -285,65 +284,136 @@ body
 
 
 /*=== Gallery Bereich ===*/
-#gallery{
-  width: 100%;
-  background: #f4efe7;
+#gal-section{
   background: linear-gradient(
   to bottom,
-  #f9f6f1 0%,
-  #f4efe7 60%,
-  #eae4db 100%
+  #f8ecda 0%,   /* очень светлый кремовый сверху */
+  #f4dfc5 45%,  /* мягкий тёплый беж в середине */
+  #efd4b1 100%  /* чуть насыщеннее и теплее внизу */
   );
-
 }
-#gallery-container {
+
+#gal-main {
+  background: transparent;
+  
+  
   max-width: 1400px;
+  /*Inhalt auf der Seite zentrieren*/
   margin: 0 auto;
-  padding: 40px 20px;
+  
   text-align: center;
+  padding: 10px;
 }
 
-.gallery-container h2 {
-  font-size: 32px;
-  margin-bottom: 30px;
+/*= Heading =*/
+#gal-heading{
+  background: transparent;
+  
+}
+
+#gal-heading h2 {
+  font-size: 44px;
   color: #333;
+  margin-top: 0;
+  margin-bottom: 0;
+  color: #7a5537;
+  padding-top: 40px;
 }
 
-.gallery-grid {
+#gal-heading p {
+  margin-top: 0;
+  margin-bottom: 0;
+  color: #7a5537;
+  padding-bottom: 20px;
+  font-size: 22px;
+}
+
+/*= /Heading =*/
+
+
+/*= Inhalt der Gallery =*/
+#gal-content{
+  background: transparent;
+  padding: 5px;
+
+  border: 1px solid rgba(162, 126, 78, 0.6); /* dezenter Goldbraun-Rahmen */
+  border-radius: 8px;                        /* sanft abgerundet */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); /* zarter Schlagschatten */
+
+  margin-bottom: 10px;
+}
+
+.gal-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px 40px;
+  
+}
+.gal-grid a {
+  text-decoration: none;
+  color: inherit;
 }
 
-.gallery-item {
+.gal-item {
   position: relative;
   overflow: hidden;
-  border-radius: 4px;
+  border-radius: 6px;
+
+  border: 1px solid rgba(162, 126, 78, 0.4);
+  
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  
+
+
 }
 
-.gallery-item img {
+.gal-caption {
+  background-color: transparent;
+  font-size: 16px;
+  padding: 20px;
+  text-align: center;
+  letter-spacing: 1px;
+  
+}
+
+.gal-caption h3{
+  
+  margin-top: 0;
+  margin-bottom: 0;
+  color: #7a5b3d; 
+}
+
+.gal-item img {
   width: 100%;
-  height: 250px;        /* Einheitliche Höhe */
+  height: 400px;        /* Einheitliche Höhe */
   object-fit: cover;    /* Zuschneiden, ohne Verzerren */
   border-radius: 4px;
   display: block;
-  transition: transform 0.3s ease;
+  
+  transition: transform .45s ease, filter .45s ease;
+  will-change: transform, filter;
 }
 
-.gallery-item:hover img {
+.gal-item:hover img {
   transform: scale(1.05);
 }
 
 .overlay {
-  position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
-  background: rgba(0,0,0,0.55); /* Verdunklung */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-  border-radius: 4px;
+  position:absolute;
+  inset:0;
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(66, 50, 37, 0.15) 0%,
+      rgba(66, 50, 37, 0.45) 60%,
+      rgba(66, 50, 37, 0.60) 100%
+    ); /* warmes dunkelbraun statt schwarz */
+  opacity:0;
+  transition: opacity .35s ease;
+  display:flex;
+  align-items:flex-end;         /* Text unten */
+  justify-content:center;
+  padding:14px 16px;
 }
 
 .overlay span {
@@ -354,9 +424,50 @@ body
   letter-spacing: 1px;
 }
 
-.gallery-item:hover .overlay {
+.gal-item:hover .overlay {
   opacity: 1;
 }
+
+
+#gal-button{
+  
+  display: inline-block;
+  padding: 20px 80px;
+  background: transparent;
+  color: #7a5537;
+  text-decoration: none;     /* keine Unterstreichung */
+  border: 1px solid #7a5537;
+
+  border-radius: 4px;
+  font-size: 15px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  margin-top: 10px;
+  margin-bottom: 40px;
+}
+
+#gal-button a{
+  text-decoration: none;
+  color: inherit;
+}
+
+
+#gal-button:hover {
+  background: linear-gradient(to bottom, #c7a873 0%, #8b6847 50%, #6b4a2f 100%);
+  color: #efd4b1;
+  transform: translateY(-2px);
+}
+
+
+
+
+
+
+
+
 /*=== /Gallery Bereich ===*/
 
 
