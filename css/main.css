@@ -283,74 +283,91 @@ body
 
 
 
+
 /*=== Gallery Bereich ===*/
 #gal-section{
   /*Dieser Hintergrund gilt für alle Elemente*/
   background: linear-gradient(
   to bottom,
-  #f8ecda 0%,   /* очень светлый кремовый сверху */
-  #f4dfc5 45%,  /* мягкий тёплый беж в середине */
-  #efd4b1 100%  /* чуть насыщеннее и теплее внизу */
+  #f8ecda 0%,   
+  #f4dfc5 45%,  
+  #efd4b1 100% 
   );
 }
 
+/*== Main-Container ==*/
 #gal-main {
-
+  /*ohne Hintergrund*/
   background: transparent;
-  
-  
+  /*Standard-Breite für main*/
   max-width: 1400px;
   /*Inhalt auf der Seite zentrieren*/
   margin: 0 auto;
-  
   text-align: center;
-  padding: 10px;
+  /*Abstand (top and bottom)*/
+  padding: 20px;
 }
+/*== /Main-Container ==*/
 
-/*= Heading =*/
+
+
+/*== Heading ==*/
 #gal-heading{
+  /*ohne Hintergrund*/
   background: transparent;
 }
 
 #gal-heading h2 {
-  font-size: 44px;
-  color: #333;
+  /*Schrift-Grösse,-Farbe und -Gewicht*/
+  font-size: 36px;
+  color: #7a5537;
+  font-weight: normal;
+
+  /*Abstände*/
   margin-top: 0;
   margin-bottom: 0;
-  color: #7a5537;
   padding-top: 40px;
 }
 
 #gal-heading p {
+  /*Schrift-Grösse und -Farbe*/
+  color: #7a5537;
+  font-size: 22px;
+
+  /*Abstände*/
   margin-top: 0;
   margin-bottom: 0;
-  color: #7a5537;
   padding-bottom: 20px;
-  font-size: 22px;
 }
+/*== /Heading ==*/
 
-/*= /Heading =*/
 
 
-/*= Inhalt der Gallery =*/
+/*== Content ==*/
 #gal-content{
+  /*ohne Hintergrund*/
   background: transparent;
-  padding: 5px;
-
-  border: 1px solid rgba(162, 126, 78, 0.6); /* dezenter Goldbraun-Rahmen */
-  border-radius: 8px;                        /* sanft abgerundet */
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); /* zarter Schlagschatten */
-
+  
+  /* dezenter Rahmen für den kompletten Bereich*/
+  border: 2px solid rgba(162, 126, 78, 0.6); 
+  border-radius: 6px;                        
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  
+  /*Abstände*/
   margin-bottom: 10px;
+  padding: 5px;
 }
 
 .gal-grid {
+  /*Layout für die Gallerie*/
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  /*Abstände*/
   gap: 10px 40px;
-  
 }
+
 .gal-grid a {
+  /*Markierung als Link entfernen*/
   text-decoration: none;
   color: inherit;
 }
@@ -358,46 +375,26 @@ body
 .gal-item {
   position: relative;
   overflow: hidden;
+  
+  /*Rahmen und Schatten*/
+  border: 3px solid rgba(162, 126, 78, 0.4);
   border-radius: 6px;
-
-  border: 1px solid rgba(162, 126, 78, 0.4);
-  
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
-  
-
-
-}
-
-.gal-caption {
-  background-color: transparent;
-  font-size: 16px;
-  padding: 20px;
-  text-align: center;
-  letter-spacing: 1px;
-  
-}
-
-.gal-caption h3{
-  
-  margin-top: 0;
-  margin-bottom: 0;
-  color: #7a5b3d; 
-}
-
-.gal-caption h3:hover {
-  color: #a27e4e; /* dein Goldbraun-Ton */
-  text-shadow: 0 0 6px rgba(194, 159, 99, 0.5); /* leichter goldener Glow */
-  transform: scale(1.03); /* minimaler Zoom für Interaktivität */
 }
 
 .gal-item img {
+  /*Breite und Höhe*/
   width: 100%;
-  height: 400px;        /* Einheitliche Höhe */
-  object-fit: cover;    /* Zuschneiden, ohne Verzerren */
-  border-radius: 4px;
+  height: 400px;    
+
+  /* Zuschneiden, ohne Verzerren */
+  object-fit: cover;    
   display: block;
-  
+
+  border-radius: 4px;
+  /*sorgt für sanfte Bewegung beim Hover*/
   transition: transform .45s ease, filter .45s ease;
+
   will-change: transform, filter;
 }
 
@@ -405,7 +402,7 @@ body
   transform: scale(1.05);
 }
 
-.overlay {
+.gal-overlay {
   position:absolute;
   inset:0;
   background:
@@ -415,6 +412,7 @@ body
       rgba(66, 50, 37, 0.45) 60%,
       rgba(66, 50, 37, 0.60) 100%
     ); /* warmes dunkelbraun statt schwarz */
+  
   opacity:0;
   transition: opacity .35s ease;
   display:flex;
@@ -423,7 +421,7 @@ body
   padding:14px 16px;
 }
 
-.overlay span {
+.gal-overlay span {
   color: #e8d6a5;   /* dein Farbton */
   font-size: 20px;
   font-weight: bold;
@@ -431,51 +429,89 @@ body
   letter-spacing: 1px;
 }
 
-.gal-item:hover .overlay {
+.gal-item:hover .gal-overlay {
   opacity: 1;
 }
+/*== /Content ==*/
 
 
+
+/*== Link bzw. Beschriftung der Bilder ==*/
+.gal-caption {
+  /*ohne Hintergrund*/
+  background-color: transparent;
+  /*Abstand*/
+  padding: 20px;
+  /*Schriftgrösse*/
+  font-size: 14px;
+  /*Text zentrieren*/
+  text-align: center;
+  /*Abstand zwischen Wörtern vergrössern*/
+  letter-spacing: 1px;
+}
+
+.gal-caption h3{
+  /*Schrifteinstellungen*/
+  font-weight: normal;
+  color: #7a5b3d; 
+
+  /*Abstände*/
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.gal-caption h3:hover {
+  color: #a27e4e; 
+  text-shadow: 0 0 6px rgba(194, 159, 99, 0.5); 
+  transform: scale(1.03);
+}
+/*== /Link bzw. Beschriftung der Bilder ==*/
+
+
+
+/*== Button zum Full Portfolio ==*/
 #gal-button{
-  
-  display: inline-block;
-  padding: 20px 80px;
+  /*ohne Hintergrund*/
   background: transparent;
+
+  display: inline-block;
+  
+  
   color: #7a5537;
-  text-decoration: none;     /* keine Unterstreichung */
+  text-decoration: none;     
   border: 1px solid #7a5537;
 
   border-radius: 4px;
-  font-size: 15px;
+  font-size: 14px;
   letter-spacing: 1px;
   text-transform: uppercase;
   cursor: pointer;
   transition: all 0.3s ease;
 
+  /*Abstände*/
   margin-top: 10px;
   margin-bottom: 40px;
+  padding: 20px 80px;
 }
 
 #gal-button a{
+  /*Markierung als Link entfernen*/
   text-decoration: none;
   color: inherit;
 }
 
 
 #gal-button:hover {
+  /*Hintergrund beim draufzeigen verändern*/
   background: linear-gradient(to bottom, #c7a873 0%, #8b6847 50%, #6b4a2f 100%);
+  /*auch die Schriftfarbe verändern*/
   color: #efd4b1;
-  transform: translateY(-2px);
+  /*und den Button etwas vergrössern*/
+  transform: scale(1.03);
 }
-
-
-
-
-
-
-
-
+/*== /Button zum Full Portfolio ==*/
 /*=== /Gallery Bereich ===*/
+
 
 
 
