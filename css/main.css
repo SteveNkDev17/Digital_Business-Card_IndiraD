@@ -377,7 +377,7 @@ body
   overflow: hidden;
   
   /*Rahmen und Schatten*/
-  border: 3px solid rgba(162, 126, 78, 0.4);
+  border: 2px solid rgba(162, 126, 78, 0.4);
   border-radius: 6px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
 }
@@ -388,9 +388,12 @@ body
   height: 400px;    
 
   /* Zuschneiden, ohne Verzerren */
-  object-fit: cover;    
+  object-fit: cover;   
+  /* verhindert die Standardlücke bei Inline-Bildern 
+  und macht das Bild als Blockelement steuerbar */ 
   display: block;
 
+  /*Bild abrunden*/
   border-radius: 4px;
   /*sorgt für sanfte Bewegung beim Hover*/
   transition: transform .45s ease, filter .45s ease;
@@ -399,12 +402,15 @@ body
 }
 
 .gal-item:hover img {
+  /*etwas vergrössern*/
   transform: scale(1.05);
 }
 
 .gal-overlay {
   position:absolute;
+  /*Overlay-Fläche füllt den gesamten Bereich des Elternelements*/
   inset:0;
+  /*Deckung mit der folgenden Farbe*/
   background:
     linear-gradient(
       to bottom,
@@ -413,23 +419,29 @@ body
       rgba(66, 50, 37, 0.60) 100%
     ); /* warmes dunkelbraun statt schwarz */
   
+  /*Overlay erst mal unsichtbar machen*/
   opacity:0;
+  /*Sorgt für weiches Einblenden*/
   transition: opacity .35s ease;
+  /*flexibles Layout*/
   display:flex;
-  align-items:flex-end;         /* Text unten */
+  /* Richtet den Inhalt am unteren Rand (Text unten) */
+  align-items:flex-end;    
+  /*Zentriert den Text horizontal.*/     
   justify-content:center;
   padding:14px 16px;
 }
 
+/*den Text im Overlay*/
 .gal-overlay span {
-  color: #e8d6a5;   /* dein Farbton */
-  font-size: 20px;
-  font-weight: bold;
-  text-transform: uppercase;
+  color: #e8d6a5;   
+  font-size: 18px;
+  font-weight: normal;
   letter-spacing: 1px;
 }
 
 .gal-item:hover .gal-overlay {
+  /*Overlay anzeigen*/
   opacity: 1;
 }
 /*== /Content ==*/
@@ -473,18 +485,19 @@ body
 #gal-button{
   /*ohne Hintergrund*/
   background: transparent;
-
+  /*Layout*/
   display: inline-block;
-  
-  
-  color: #7a5537;
-  text-decoration: none;     
+  /*Rahmen*/   
   border: 1px solid #7a5537;
-
   border-radius: 4px;
+
+  /*Text-Einstellungen*/
+  color: #7a5537;
+  text-decoration: none;  
   font-size: 14px;
   letter-spacing: 1px;
   text-transform: uppercase;
+
   cursor: pointer;
   transition: all 0.3s ease;
 
@@ -499,7 +512,6 @@ body
   text-decoration: none;
   color: inherit;
 }
-
 
 #gal-button:hover {
   /*Hintergrund beim draufzeigen verändern*/
