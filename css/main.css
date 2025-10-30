@@ -14,45 +14,6 @@ body
   line-height: 1.5;
 }
 
-/* 2. Layout Basis */
-.section {
-  width: 100%;
-}
-.section.bg-dark {
-  background-color: #222;              
-  
-}
-.section.bg-light {
-  background: #f5f2ed; /* Fallback für ältere Geräte */
-}
-
-.container {
-  width: 100%;
-  max-width: 1400px;
-  margin: 0 auto; 
-  padding: 20px;       
-  box-sizing: border-box;
-}
-
-.container.bg-dark {
-  background-color: black;     
-  
-}
-.container.bg-light {
-  background: #f5f2ed; /* Fallback für ältere Geräte */
-  background: linear-gradient(
-  to bottom,
-  #f9f6f1 0%,
-  #f5f2ed 60%,
-  #ece7df 100%
-);
-
-}
-
-
-
-
-
 
 /*====== HEADER ======*/
 /*=== HEADER-SELBST ===*/
@@ -75,8 +36,7 @@ body
   
   /* Hintergrund mit leichtem Verlauf für Tiefe */
   background-color: rgba(77, 61, 48, 0.9); /* Fallback für ältere Browser */
-  background: linear-gradient
-  (
+  background: linear-gradient(
     to bottom,
     rgba(77, 61, 48, 0.92) 0%,   
     rgba(62, 49, 39, 0.96) 100%  
@@ -304,7 +264,6 @@ body
   /*Inhalt auf der Seite zentrieren*/
   margin: 0 auto;
   text-align: center;
-  /*Abstand (top and bottom)*/
   padding: 20px;
 }
 /*== /Main-Container ==*/
@@ -322,23 +281,19 @@ body
   font-size: 36px;
   color: #7a5537;
   font-weight: normal;
-
-  /*Abstände*/
-  margin-top: 0;
-  margin-bottom: 0;
-  padding-top: 40px;
 }
 
-#gal-heading p {
-  /*Schrift-Grösse und -Farbe*/
-  color: #7a5537;
-  font-size: 22px;
-
-  /*Abstände*/
-  margin-top: 0;
-  margin-bottom: 0;
-  padding-bottom: 20px;
+/*Unterstreichung fuer die Ueberschrift*/
+#gal-heading h2::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 2px;
+  margin: 10px auto 0;
+  background: linear-gradient(to right, #a27e4e, #c7a873);
+  border-radius: 2px;
 }
+
 /*== /Heading ==*/
 
 
@@ -515,7 +470,12 @@ body
 
 #gal-button:hover {
   /*Hintergrund beim draufzeigen verändern*/
-  background: linear-gradient(to bottom, #c7a873 0%, #8b6847 50%, #6b4a2f 100%);
+  background: linear-gradient(
+    to bottom,
+    #c7a873 0%,
+    #8b6847 50%,
+    #6b4a2f 100%
+  );
   /*auch die Schriftfarbe verändern*/
   color: #efd4b1;
   /*und den Button etwas vergrössern*/
@@ -528,81 +488,126 @@ body
 
 
 /*=== Preise Bereich === */
-#prices{
+#price-section{
   background: #3c2f26;
   background: linear-gradient(
   to bottom,
   #564434 0%,
   #3c2f26 100%
 );
-
+  /*Abstand in der Section (top - bottom) */
+  padding: 60px;
 }
 
-#pricing-heading{
-  font-weight: normal;
-  color: #A27E4E;
-}
-.pricing-table {
-
+.price-main {
   width: 100%;
+  max-width: 1400px;
+  margin: 0 auto; 
+  box-sizing: border-box;
+  /*Abstand im main-container (top - bottom) */
+  padding: 20px;
+  /*Hintergrund auf durchsichtig, siehe price-section*/       
+  background: transparent;
+}
+
+
+/*== Überschrift über der Tabelle ==*/
+#price-heading{
+  font-weight: normal;
+  color: #C49A63;
+}
+/*== /Überschrift über der Tabelle ==*/
+
+/*== Body über der Tabelle ==*/
+.price-table {
+  width: 100%;
+  /*Fallbackfarbe*/
   background: #f4efe7;
+  /*Hintegrundfarbe für die ganze Tabelle,
+  ohne Kopfzeile*/
   background: linear-gradient(
   to bottom,
   #f9f6f1 0%,
   #f4efe7 60%,
   #eae4db 100%
   );
-
-  width: 100%;
-  border-collapse: collapse;
+  /*Text in der ganzen Tabelle zentrieren*/
   text-align: center;
+  /*Die Linien der Tabellen zusammenführen*/
+  border-collapse: collapse;
 }
+/*== /Body über der Tabelle ==*/
 
-.table-header{
-  background: linear-gradient(to bottom, #4b3a2e 0%, #3c2f26 100%);
-  color: #C49A63; 
-  border-bottom: 1px solid #a27e4e;
-}
-
-.table-header-cell,
-.table-cell-highlight,
-.table-cell-feature,
-.table-cell-option,
-.table-cell-total,
-.table-cell-summary
+.header-cell,
+.cell-highlight
 {
-  border: 1px solid #a9a891;
+  /*Abstand innerhalb der Zelle*/
   padding: 10px;
 }
 
-.table-header-cell{
-  
-  font-weight: normal;
-  letter-spacing: 0.3px;
+.header-cell{
+  /*Fallbackfarbe*/
+  background: #3c2f26;
+  /*Hintergrundfarbe selbst*/
+  background: linear-gradient(
+    to bottom, 
+    #4b3a2e 0%, 
+    #3c2f26 100%
+  );
+  color: #C49A63; 
+  font-weight: bold;
+  /*Rahmen um die Zelle*/
+  border: 1px solid #a88b61;
 }
 
-.table-cell-highlight{
+.cell-highlight{
+  /*Fallbackfarbe*/
+  background: #b7955f;
+  /*Hintergrundfarbe selbst*/
   background: linear-gradient(
   135deg,
   #e1ce9b 0%,   /* sanftes Licht oben links */
   #c4ab79 45%,  /* dein Grundton */
   #b7955f 100%  /* leicht dunkler Bronze-Schluss */
   );
-
   color: #3c2f26;
-
   font-weight: bold;
+  /*Rahmen um die Zelle*/
+  border: 1px solid #b7955f;
+}
+/*== /Kopfbereich der Tabelle ==*/
+
+
+/*== Körper der Tabelle ==*/
+.cell-feature,
+.cell-option,
+.cell-total,
+.cell-summary
+{
+  /*Rahmen um die Zelle*/
+  border: 1px solid #a9a891;
+  /*Abstand innerhalb der Zelle*/
+  padding: 10px;
 }
 
-.table-cell-feature,
-.table-cell-total{
+/*Linke Spalte, ohne Kopfzeile*/
+.cell-feature,
+.cell-total{
   text-align: left;
 }
+/*/Linke Spalte, ohne Kopfzeile*/
 
-.table-cell-total,
-.table-cell-summary{
+/*Die Ergebniszeile, ohne Highlight-Zelle*/
+.cell-total,
+.cell-summary{
   font-weight: bold;
 }
+
+
+
+/*/Die Ergebniszeile, ohne Highlight-Zelle*/
+
+/*== /Körper der Tabelle ==*/
 /*=== /Preise Bereich === */
 
 
@@ -617,6 +622,14 @@ body
   #f4efe7 60%,
   #eae4db 100%
   );
+}
+
+.consultation-main {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto; 
+  padding: 20px;       
+  box-sizing: border-box;
 }
 
 #consultation-row{
