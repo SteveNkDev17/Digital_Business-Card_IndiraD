@@ -469,6 +469,7 @@ body
 }
 
 #gal-button:hover {
+  background: #6b4a2f;
   /*Hintergrund beim draufzeigen verändern*/
   background: linear-gradient(
     to bottom,
@@ -495,8 +496,8 @@ body
   #564434 0%,
   #3c2f26 100%
 );
-  /*Abstand in der Section (top - bottom) */
-  padding: 60px;
+  
+  
 }
 
 .price-main {
@@ -504,8 +505,9 @@ body
   max-width: 1400px;
   margin: 0 auto; 
   box-sizing: border-box;
-  /*Abstand im main-container (top - bottom) */
+  /*Abstaende */
   padding: 20px;
+  padding-bottom: 40px;
   /*Hintergrund auf durchsichtig, siehe price-section*/       
   background: transparent;
 }
@@ -613,7 +615,7 @@ body
 
 
 /*=== Consultation Bereich ===*/
-#consultation{
+#consultation-section{
   width: 100%;
   background: #f4efe7;
   background: linear-gradient(
@@ -632,6 +634,7 @@ body
   box-sizing: border-box;
 }
 
+/*== Conteiner mit 2 Spalten(als Container links,rechts) ==*/
 #consultation-row{
   display: flex;
   flex-direction: row;
@@ -646,7 +649,7 @@ body
 }
 
 #consultation-col-left{
-  padding: 20px 10px; 
+  padding: 20px 4px; 
 }
 
 #consultation-col-right {
@@ -685,6 +688,7 @@ body
 #consultation-phone {
   height: 30px;
   box-sizing: border-box;
+  padding: 4px;
 }
 #consultation-name {
   width: 100%;
@@ -697,8 +701,11 @@ body
 }
   
 #consultation-message {
-  resize: none;
-   
+  /* kein manuelles Vergrößern */       
+  resize: none;   
+  /* kontrollierte Höhe */
+  height: 100px;          
+  padding: 4px;
 }
 
 #consultation-name:focus,
@@ -708,17 +715,44 @@ body
 #consultation-message:focus {
   outline: none;
   border: 1px solid grey;     
-  box-shadow: 0 0 4px #f4b400;
+  box-shadow: 0 0 4px #6b4a2f;
 }
 
 #consultation-submit{
-  width: auto;     
+  width: auto; 
+  /*Ausrichtung im Conteiner -> links*/    
   align-self: flex-start; 
-  height: 22px;
+  
+  background-color: transparent;
+  padding: 8px 10px;
+  
+  /*Rahmen*/   
+  border: 1px solid #7a5537;
   border-radius: 25px;
-  border-style: none;
-  background-color: #e8d6a5;
+
+  /*Text-Einstellungen*/
+  color: #7a5537;
+  text-decoration: none;  
+  font-size: 12px;
+  letter-spacing: 1px;
 }
+
+#consultation-submit:hover{
+  background: #6b4a2f;
+  /*Hintergrund beim draufzeigen verändern*/
+  background: linear-gradient(
+    to bottom,
+    #c7a873 0%,
+    #8b6847 50%,
+    #6b4a2f 100%
+  );
+  /*auch die Schriftfarbe verändern*/
+  color: #f4efe7;
+  /*und den Button etwas vergrössern*/
+  transform: scale(1.03);
+}
+
+
 
 #consultation-avatar
 {
@@ -735,12 +769,10 @@ body
   height: 250px;
   object-fit: cover;   
   border-radius: 50%; 
-  border: 2px solid #e8d6a5; 
+  border: 2px solid #A27E4E; 
 }
 /*=== /Consultation Bereich ===*/
 /*====== /Main ======*/
-
-
 
 
 
