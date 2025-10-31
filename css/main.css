@@ -748,8 +748,6 @@ body
   );
   /*auch die Schriftfarbe verändern*/
   color: #f4efe7;
-  /*und den Button etwas vergrössern*/
-  transform: scale(1.03);
 }
 
 
